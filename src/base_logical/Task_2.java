@@ -10,7 +10,7 @@ public class Task_2 {
         final int a = in.nextInt();
         final int b = in.nextInt();
         final int c = in.nextInt();
-
+        in.close();
 
         //- Вывести на консоль переменные, значения которых делятся на 5 (вида: a=25, c=15), если нет ни одного значений, делящегося на 5, вывести строку: "нет значений, кратных 5"
         int[] array = {a, b, c};
