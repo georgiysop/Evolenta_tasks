@@ -23,7 +23,7 @@ public class Task_3 {
         int[] array = new int[20];
         //int[] array = new int[]{1, 2, 3, 4, 5, 6, 7, 8, 5, 10, 12, 12, 3, 14, 15, 11, 9, 5, 5, 5};
         for (int i = 0; i < array.length; i++) {
-            int random = (int) (Math.random() * 15);
+            int random = (int) (Math.random() * 15 + 1);
             array[i] = random;
         }
         System.out.println(Arrays.toString(array));
