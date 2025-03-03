@@ -102,9 +102,5 @@ public class Task_4 {
         //Task_4_2();
         //Task_4_3();
         //Task_4_4();
-
-
     }
-
-
 }
