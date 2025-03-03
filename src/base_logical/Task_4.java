@@ -48,6 +48,7 @@ public class Task_4 {
 
     public static void Task_4_2() {
         Scanner in = new Scanner(System.in);
+        System.out.println("Введите строку");
         String str = in.nextLine();
         String res1 = str.replace("кака", "вырезано цензурой");
         String res2 = res1.replace("бяка", "вырезано цензурой");
@@ -65,6 +66,7 @@ public class Task_4 {
 //Вывод: 2020-12-31
 
     public static void Task_4_3() {
+        System.out.println("Введите дату в формате 'дд.мм.гггг'");
         Scanner in = new Scanner(System.in);
         String str_date = in.nextLine();
         String day = str_date.substring(0, 2);
@@ -79,6 +81,7 @@ public class Task_4 {
 //💡- Сделать задание 4.3. с использованием классов Date и SimpleDateFormat и их соответствующих методов.
 
     public static void Task_4_4() {
+        System.out.println("Введите дату в формате 'дд.мм.гггг'");
         Scanner in = new Scanner(System.in);
         String str_date = in.nextLine();
 
