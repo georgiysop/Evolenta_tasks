@@ -1,8 +1,10 @@
 package base_logical;
 
+import java.util.GregorianCalendar;
 import java.util.Scanner;
 import java.util.Date;
 import java.text.*;
+import java.util.Calendar;
 
 public class Task_4 {
 
@@ -65,6 +67,11 @@ public class Task_4 {
     public static void Task_4_3() {
         Scanner in = new Scanner(System.in);
         String str_date = in.nextLine();
+        String day = str_date.substring(0, 2);
+        String month = str_date.substring(3, 5);
+        String year = str_date.substring(6, 10);
+        String result = year + "-" + month + "-" + day;
+        System.out.println(result);
     }
 
 
@@ -73,26 +80,27 @@ public class Task_4 {
 
     public static void Task_4_4() {
         Scanner in = new Scanner(System.in);
-        String s = in.nextLine();
+        String str_date = in.nextLine();
 
-        SimpleDateFormat ft = new SimpleDateFormat("yyyy-MM-dd");
-        Date parsingDate;
+        SimpleDateFormat ft = new SimpleDateFormat("dd.MM.yyyy");
+        SimpleDateFormat ft2 = new SimpleDateFormat("yyyy-MM-dd");
+
         try {
-            parsingDate = ft.parse(s);
-            System.out.println(parsingDate);
-        }catch (ParseException e) {
-            System.out.println("Нераспаршена с помощью " + ft);
+            Date date_1 = ft.parse(str_date);
+            System.out.println(ft2.format(date_1));
         }
-
-
-
+        catch (ParseException e) {
+            e.printStackTrace();
+        }
     }
 
     public static void main(String[] args) {
         //Task_4_1();
         //Task_4_2();
         //Task_4_3();
-        Task_4_4();
+        //Task_4_4();
+
+
     }
 
 
