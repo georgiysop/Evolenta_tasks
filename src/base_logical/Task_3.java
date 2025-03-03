@@ -21,29 +21,32 @@ public class Task_3 {
 
         //задание массива
         int[] array = new int[20];
+        //int[] array = new int[]{1, 2, 3, 4, 5, 6, 7, 8, 5, 10, 12, 12, 3, 14, 15, 11, 9, 5, 5, 5};
         for (int i = 0; i < array.length; i++) {
             int random = (int) (Math.random() * 15);
             array[i] = random;
         }
-        System.out.print(Arrays.toString(array));
+        System.out.println(Arrays.toString(array));
+
 
         //нахождение повторяющихся элементов
-        int kol = 0;
-        int element = 0;
+        boolean[] counted = new boolean[array.length]; // Массив для отслеживания уже учтённых элементов
+
         for (int i = 0; i < array.length; i++) {
-            element = array[i];
-            for (int j = 0; j < array.length; j++) {
-                if (array[j] == element &&  ) {
-                    continue;
-                } else if (array[j] == element)  {
-                    kol++;
+            if (!counted[i]) {
+                int kol = 1;
+                int element = array[i];
+
+                for (int j = i + 1; j < array.length; j++) {
+                    if (array[j] == element) {
+                        kol++;
+                        counted[j] = true;
+                    }
                 }
-            }
-            if (kol != 1) {
-                System.out.println("Число '" + element + "' встречается " + kol + " раза");
-                kol = 0;
-            } else {
-                kol = 0;
+                if (kol != 1) {
+                    System.out.println("Число '" + element + "' встречается " + kol + " раза");
+                    kol = 0;
+                }
             }
         }
     }
