@@ -99,11 +99,5 @@ public class Task_5 {
             e.printStackTrace();
             System.out.println("Ошибка в формате даты. Пожалуйста, введите дату в формате dd.MM.yyyy.");
         }
-
-
-
-
-
-
     }
 }
