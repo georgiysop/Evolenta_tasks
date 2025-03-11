@@ -25,6 +25,7 @@
 //Вывод: Александр2003, возраст 20 лет
 
 package base_OOP.Package1;
+
 import java.util.Scanner;
 
 public class User {

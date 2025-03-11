@@ -1,6 +1,3 @@
-package base_OOP.Package2;
-
-
 //💡💡- Создать класс "User", содержащий две переменных:
 //private String name;
 //private Integer age;
@@ -42,6 +39,8 @@ package base_OOP.Package2;
 //Вывод: Мария, возраст 25 лет
 //Вывод: Евгений, возраст 50 лет
 
+package base_OOP.Package2;
+
 import java.util.ArrayList;
 import java.util.Collections;
 import java.util.Scanner;
@@ -76,6 +75,7 @@ public class User implements Comparable<User> {
     public String toString() {
         return this.name + ", возраст " + this.age + " лет";
     }
+
     @Override
     public int compareTo(User user1) {
         return this.age - user1.age;
@@ -95,6 +95,7 @@ class UserTest {
             users.add(new User(name1, age1));
         }
         Collections.sort(users);
+        System.out.println(users);
 
         for (User user : users) {
             System.out.println(user);
